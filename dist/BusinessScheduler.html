@@ -1,0 +1,45 @@
+<html><head>
+  <SCRIPT src="./web-files/dtjava.js"></SCRIPT>
+<script>
+    function launchApplication(jnlpfile) {
+        dtjava.launch(            {
+                url : 'BusinessScheduler.jnlp',
+                jnlp_content : 'PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPGpubHAgc3BlYz0iMS4wIiB4bWxuczpqZng9Imh0dHA6Ly9qYXZhZnguY29tIiBocmVmPSJCdXNpbmVzc1NjaGVkdWxlci5qbmxwIj4KICA8aW5mb3JtYXRpb24+CiAgICA8dGl0bGU+QnVzaW5lc3NTY2hlZHVsZXI8L3RpdGxlPgogICAgPHZlbmRvcj5KZXJvZDwvdmVuZG9yPgogICAgPGRlc2NyaXB0aW9uPkFwcGxpY2F0aW9uIGZvciBrZWVwaW5nIHVwIHdpdGggYXBwb2ludG1lbnRzLCBjbGllbnRzLCBhbmQgdG9kbyBsaXN0cy48L2Rlc2NyaXB0aW9uPgogICAgPG9mZmxpbmUtYWxsb3dlZC8+CiAgPC9pbmZvcm1hdGlvbj4KICA8cmVzb3VyY2VzPgogICAgPGoyc2UgdmVyc2lvbj0iMS42KyIgaHJlZj0iaHR0cDovL2phdmEuc3VuLmNvbS9wcm9kdWN0cy9hdXRvZGwvajJzZSIvPgogICAgPGphciBocmVmPSJCdXNpbmVzc1NjaGVkdWxlci5qYXIiIHNpemU9IjIzNTQyNyIgZG93bmxvYWQ9ImVhZ2VyIiAvPgogICAgPGphciBocmVmPSJsaWIva290bGluLXJ1bnRpbWUuamFyIiBzaXplPSI4Nzg1MTEiIGRvd25sb2FkPSJlYWdlciIgLz4KICAgIDxqYXIgaHJlZj0ibGliL3NxbGl0ZS1qZGJjLTMuMjcuMi4xLmphciIgc2l6ZT0iNjAxMjEwNyIgZG93bmxvYWQ9ImVhZ2VyIiAvPgogIDwvcmVzb3VyY2VzPgogIDxhcHBsZXQtZGVzYyAgd2lkdGg9IjgwMCIgaGVpZ2h0PSI2MDAiIG1haW4tY2xhc3M9ImNvbS5qYXZhZngubWFpbi5Ob0phdmFGWEZhbGxiYWNrIiAgbmFtZT0iQnVzaW5lc3NTY2hlZHVsZXIiID4KICAgIDxwYXJhbSBuYW1lPSJyZXF1aXJlZEZYVmVyc2lvbiIgdmFsdWU9IjguMCsiLz4KICA8L2FwcGxldC1kZXNjPgogIDxqZng6amF2YWZ4LWRlc2MgIHdpZHRoPSI4MDAiIGhlaWdodD0iNjAwIiBtYWluLWNsYXNzPSJNYWluLkJ1c2luZXNzU2NoZWR1bGVyIiAgbmFtZT0iQnVzaW5lc3NTY2hlZHVsZXIiIC8+CiAgPHVwZGF0ZSBjaGVjaz0iYWx3YXlzIi8+Cjwvam5scD4K'
+            },
+            {
+                javafx : '8.0+'
+            },
+            {}
+        );
+        return false;
+    }
+</script>
+
+<script>
+    function javafxEmbedMain() {
+        dtjava.embed(
+            {
+                id : 'Main',
+                url : 'BusinessScheduler.jnlp',
+                placeholder : 'javafx-app-placeholder',
+                width : '800',
+                height : '600',
+                jnlp_content : 'PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPGpubHAgc3BlYz0iMS4wIiB4bWxuczpqZng9Imh0dHA6Ly9qYXZhZnguY29tIiBocmVmPSJCdXNpbmVzc1NjaGVkdWxlci5qbmxwIj4KICA8aW5mb3JtYXRpb24+CiAgICA8dGl0bGU+QnVzaW5lc3NTY2hlZHVsZXI8L3RpdGxlPgogICAgPHZlbmRvcj5KZXJvZDwvdmVuZG9yPgogICAgPGRlc2NyaXB0aW9uPkFwcGxpY2F0aW9uIGZvciBrZWVwaW5nIHVwIHdpdGggYXBwb2ludG1lbnRzLCBjbGllbnRzLCBhbmQgdG9kbyBsaXN0cy48L2Rlc2NyaXB0aW9uPgogICAgPG9mZmxpbmUtYWxsb3dlZC8+CiAgPC9pbmZvcm1hdGlvbj4KICA8cmVzb3VyY2VzPgogICAgPGoyc2UgdmVyc2lvbj0iMS42KyIgaHJlZj0iaHR0cDovL2phdmEuc3VuLmNvbS9wcm9kdWN0cy9hdXRvZGwvajJzZSIvPgogICAgPGphciBocmVmPSJCdXNpbmVzc1NjaGVkdWxlci5qYXIiIHNpemU9IjIzNTQyNyIgZG93bmxvYWQ9ImVhZ2VyIiAvPgogICAgPGphciBocmVmPSJsaWIva290bGluLXJ1bnRpbWUuamFyIiBzaXplPSI4Nzg1MTEiIGRvd25sb2FkPSJlYWdlciIgLz4KICAgIDxqYXIgaHJlZj0ibGliL3NxbGl0ZS1qZGJjLTMuMjcuMi4xLmphciIgc2l6ZT0iNjAxMjEwNyIgZG93bmxvYWQ9ImVhZ2VyIiAvPgogIDwvcmVzb3VyY2VzPgogIDxhcHBsZXQtZGVzYyAgd2lkdGg9IjgwMCIgaGVpZ2h0PSI2MDAiIG1haW4tY2xhc3M9ImNvbS5qYXZhZngubWFpbi5Ob0phdmFGWEZhbGxiYWNrIiAgbmFtZT0iQnVzaW5lc3NTY2hlZHVsZXIiID4KICAgIDxwYXJhbSBuYW1lPSJyZXF1aXJlZEZYVmVyc2lvbiIgdmFsdWU9IjguMCsiLz4KICA8L2FwcGxldC1kZXNjPgogIDxqZng6amF2YWZ4LWRlc2MgIHdpZHRoPSI4MDAiIGhlaWdodD0iNjAwIiBtYWluLWNsYXNzPSJNYWluLkJ1c2luZXNzU2NoZWR1bGVyIiAgbmFtZT0iQnVzaW5lc3NTY2hlZHVsZXIiIC8+CiAgPHVwZGF0ZSBjaGVjaz0iYWx3YXlzIi8+Cjwvam5scD4K'
+            },
+            {
+                javafx : '8.0+'
+            },
+            {}
+        );
+    }
+    <!-- Embed FX application into web page once page is loaded -->
+    dtjava.addOnloadCallback(javafxEmbedMain);
+</script>
+
+</head><body>
+<h2>Test page for <b>BusinessScheduler</b></h2>
+  <b>Webstart:</b> <a href='BusinessScheduler.jnlp' onclick="return launchApplication('BusinessScheduler.jnlp');">click to launch this app as webstart</a><br><hr><br>
+
+  <!-- Applet will be inserted here -->
+  <div id='javafx-app-placeholder'></div>
+</body></html>

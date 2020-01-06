@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="504.0" prefWidth="222.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Scenes.SubtodoSceneController">
+   <children>
+      <Label fx:id="subDoLabel" layoutX="10.0" layoutY="16.0" prefHeight="112.0" prefWidth="201.0" text="Sub Todo Item" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Label>
+      <GridPane layoutX="11.0" layoutY="146.0" prefHeight="243.0" prefWidth="200.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="93.333251953125" minWidth="10.0" prefWidth="66.6666259765625" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="133.3333740234375" minWidth="10.0" prefWidth="133.3333740234375" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="76.33331298828125" minHeight="10.0" prefHeight="37.333333333333336" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="166.6666463216146" minHeight="10.0" prefHeight="163.33333333333334" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="52.33331298828125" minHeight="10.0" prefHeight="34.33331298828125" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label fx:id="subTitleLabel" text="Title" />
+            <Label fx:id="subNotesLabel" text="Notes" GridPane.rowIndex="1" />
+            <Label fx:id="subCompleteLabel" text="Completed" GridPane.rowIndex="2" />
+            <TextArea fx:id="subNotesTA" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="subTitleTF" GridPane.columnIndex="1" />
+            <CheckBox fx:id="subCheckBox" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+      <Button fx:id="subCancelButton" layoutX="14.0" layoutY="434.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="73.0" text="Cancel" onAction="#subCancelClicked"/>
+      <Button fx:id="subSaveButton" layoutX="134.0" layoutY="434.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="73.0" text="Save" onAction="#subSaveClicked"/>
+      <Button fx:id="subCloseButton" layoutX="2.0" layoutY="3.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="23.0" text="X" onAction="#subCancelClicked"/>
+   </children>
+</AnchorPane>

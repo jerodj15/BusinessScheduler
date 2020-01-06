@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="BusinessScheduler.jnlp">
+  <information>
+    <title>BusinessScheduler</title>
+    <vendor>Jerod</vendor>
+    <description>Application for keeping up with appointments, clients, and todo lists.</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="BusinessScheduler.jar" size="235427" download="eager" />
+    <jar href="lib/kotlin-runtime.jar" size="878511" download="eager" />
+    <jar href="lib/sqlite-jdbc-3.27.2.1.jar" size="6012107" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="BusinessScheduler" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="Main.BusinessScheduler"  name="BusinessScheduler" />
+  <update check="always"/>
+</jnlp>

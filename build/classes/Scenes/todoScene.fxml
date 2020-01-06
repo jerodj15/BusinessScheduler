@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="504.0" prefWidth="725.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Scenes.TodoSceneController">
+   <children>
+      <Label fx:id="toDoLabel" layoutX="272.0" layoutY="14.0" text="ToDo Details">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Label>
+      <Separator layoutX="-1.0" layoutY="73.0" prefHeight="0.0" prefWidth="725.0" />
+      <GridPane layoutX="14.0" layoutY="120.0" prefHeight="295.0" prefWidth="340.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="207.66676330566406" minWidth="10.0" prefWidth="207.66676330566406" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="108.333251953125" minWidth="10.0" prefWidth="18.333236694335938" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="107.3333740234375" minHeight="10.0" prefHeight="76.00001525878906" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="83.6666514078776" minHeight="10.0" prefHeight="18.666687011718764" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="110.99997965494791" minHeight="10.0" prefHeight="110.99997965494791" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="43.6666259765625" minHeight="10.0" prefHeight="39.6666259765625" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label fx:id="titleLabel" text="Title" />
+            <Label fx:id="notesLabel" text="Notes" GridPane.rowIndex="1" />
+            <Label fx:id="createDateLabel" text="Creation Date" GridPane.rowIndex="4" />
+            <Label fx:id="completedLabel" text="Completed" GridPane.rowIndex="2" />
+            <Label fx:id="feeLabel" text="Fee" GridPane.rowIndex="3" />
+            <TextArea fx:id="noteTA" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="titleTF" GridPane.columnIndex="1" />
+            <CheckBox fx:id="completedCheckBox" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="createDateTF" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Button fx:id="newTodoFeeButton" mnemonicParsing="false" onAction="#newTodoFeeClicked" text="..." GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <TableView fx:id="todoFeeTV" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+              <columns>
+                <TableColumn fx:id="todoFeeTitleColumn" prefWidth="156.00001275539398" text="Title" />
+                <TableColumn fx:id="todoFeeAmountColumn" prefWidth="51.3333740234375" text="Amount" />
+              </columns>
+            </TableView>
+         </children>
+      </GridPane>
+      <Separator layoutX="360.0" layoutY="73.0" orientation="VERTICAL" prefHeight="349.0" prefWidth="0.0" />
+      <Separator layoutX="3.0" layoutY="420.0" prefHeight="0.0" prefWidth="725.0" />
+      <GridPane layoutX="371.0" layoutY="123.0" prefHeight="295.0" prefWidth="340.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="141.3333740234375" minWidth="10.0" prefWidth="113.33340454101562" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="204.0" minWidth="10.0" prefWidth="204.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="178.66659545898438" minWidth="10.0" prefWidth="26.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label fx:id="clientLabel" text="Client" />
+            <Label fx:id="subDoLabel" text="Sub To-Do Items" GridPane.rowIndex="1" />
+            <Label fx:id="windowedScheduleLabel" text="Windowed Schedule" GridPane.rowIndex="2" />
+            <ComboBox fx:id="clientCB" prefHeight="25.0" prefWidth="201.0" GridPane.columnIndex="1" />
+            <TableView fx:id="subTodoTV" prefHeight="86.0" prefWidth="177.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+              <columns>
+                <TableColumn fx:id="subCompletedColumn" prefWidth="68.6666259765625" text="Complete" />
+                <TableColumn fx:id="subTitleColumn" prefWidth="133.33333333333334" text="Title" />
+              </columns>
+            </TableView>
+            <Button fx:id="newClientButton" mnemonicParsing="false" text="..." GridPane.columnIndex="2" />
+            <Button fx:id="newSubTodoButton" mnemonicParsing="false" onAction="#addSubTodoClicked" text="..." GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <GridPane GridPane.columnIndex="1" GridPane.rowIndex="2">
+              <columnConstraints>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label fx:id="betweenLabel" text="Between The Dates of" textAlignment="CENTER" />
+                  <GridPane GridPane.rowIndex="1">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label fx:id="windowStartLabel" prefHeight="17.0" prefWidth="101.0" style="-fx-border-color: BLACK;" wrapText="true" />
+                        <Label fx:id="windowEndLabel" prefHeight="17.0" prefWidth="104.0" style="-fx-border-color: BLACK;" GridPane.columnIndex="1" />
+                     </children>
+                  </GridPane>
+               </children>
+            </GridPane>
+            <Button fx:id="windowScheduleButton" mnemonicParsing="false" text="..." GridPane.columnIndex="2" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+      <Button fx:id="saveButton" layoutX="630.0" layoutY="440.0" mnemonicParsing="false" onAction="#saveButtonClicked" prefHeight="40.0" prefWidth="73.0" text="Save" />
+      <Button fx:id="editButton" layoutX="522.0" layoutY="440.0" mnemonicParsing="false" onAction="#editButtonClicked" prefHeight="40.0" prefWidth="73.0" text="Edit" />
+      <Button fx:id="backButton" layoutX="14.0" layoutY="18.0" mnemonicParsing="false" onAction="#backButtonPressed" prefHeight="40.0" prefWidth="73.0" text="Back" />
+   </children>
+</AnchorPane>

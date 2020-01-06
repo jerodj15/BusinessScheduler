@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="504.0" prefWidth="725.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Scenes.ClientListingController">
+   <children>
+      <Label fx:id="clientListing" layoutX="231.0" layoutY="11.0" prefHeight="51.0" prefWidth="225.0" text="Client Listing">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Label>
+      <Separator layoutX="-3.0" layoutY="68.0" prefHeight="0.0" prefWidth="725.0" />
+      <Button fx:id="backButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#backButtonPressed" prefHeight="45.0" prefWidth="74.0" text="Back" />
+      <ListView fx:id="clientLV" layoutX="14.0" layoutY="132.0" prefHeight="294.0" prefWidth="208.0" />
+      <TextField fx:id="searchTF" layoutX="14.0" layoutY="93.0" prefHeight="26.0" prefWidth="208.0" />
+      <Button fx:id="searchButton" layoutX="236.0" layoutY="93.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="42.0" text="..." />
+      <Separator layoutY="440.0" prefHeight="0.0" prefWidth="725.0" />
+      <Button fx:id="saveButton" layoutX="642.0" layoutY="448.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="74.0" text="Save" />
+      <Separator layoutX="293.0" layoutY="68.0" orientation="VERTICAL" prefHeight="373.0" prefWidth="0.0" />
+      <GridPane fx:id="clientInfoGV" layoutX="306.0" layoutY="78.0" prefHeight="354.0" prefWidth="409.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="176.0" minWidth="10.0" prefWidth="147.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="218.0" minWidth="10.0" prefWidth="216.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="43.0" minHeight="10.0" prefHeight="31.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="101.0" minHeight="10.0" prefHeight="92.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label fx:id="firstLabel" text="First Name" />
+            <Label fx:id="lastLabel" text="Last Name" GridPane.rowIndex="1" />
+            <Label fx:id="phoneLabel" text="Phone" GridPane.rowIndex="2" />
+            <Label fx:id="emailLabel" text="Email" GridPane.rowIndex="3" />
+            <Label fx:id="addressLabel" text="Address" GridPane.rowIndex="4" />
+            <Label fx:id="dobLabel" text="Date of Birth" GridPane.rowIndex="5" />
+            <TextField fx:id="firstTF" GridPane.columnIndex="1" />
+            <TextField fx:id="lastTF" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="phoneTF" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="emailTF" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="addressTF" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField fx:id="dobTF" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <Label fx:id="notesLabel" text="Notes" GridPane.rowIndex="6" />
+            <TextArea fx:id="notesTA" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+         </children>
+      </GridPane>
+      <Button fx:id="editButton" layoutX="557.0" layoutY="448.0" mnemonicParsing="false" onAction="#editButtonClicked" prefHeight="45.0" prefWidth="74.0" text="Edit" />
+      <Button fx:id="selectButton" layoutX="231.0" layoutY="214.0" mnemonicParsing="false" onAction="#selectClientClicked" prefHeight="109.0" prefWidth="53.0" text="..." />
+      <Button fx:id="newClientButton" layoutX="555.0" layoutY="14.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="150.0" text="Create New Client" onAction="#newClientButtonPressed"/>
+   </children>
+</AnchorPane>
