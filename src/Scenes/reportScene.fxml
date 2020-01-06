@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="504.0" prefWidth="725.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Scenes.ReportSceneController">
+   <children>
+      <Separator layoutY="58.0" prefHeight="9.0" prefWidth="725.0" />
+      <Button fx:id="backButton" layoutX="14.0" layoutY="12.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="98.0" text="Back" onAction="#backButtonPressed"/>
+      <Label fx:id="reportLabel" layoutX="314.0" layoutY="17.0" text="Reports">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <TabPane fx:id="reportsTabPane" layoutX="14.0" layoutY="84.0" prefHeight="364.0" prefWidth="688.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+            <Tab fx:id="serviceFeesTab" text="Services / Fees Reports">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <GridPane layoutX="14.0" layoutY="13.0" prefHeight="311.0" prefWidth="666.0">
+                          <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="383.0" minWidth="10.0" prefWidth="225.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="444.0" minWidth="10.0" prefWidth="441.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                              <RowConstraints maxHeight="88.0" minHeight="0.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="293.0" minHeight="10.0" prefHeight="291.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label text="Services and Fees" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="17.0" />
+                                 </font>
+                              </Label>
+                              <GridPane prefHeight="162.0" prefWidth="208.0" GridPane.rowIndex="1">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="183.0" minWidth="10.0" prefWidth="60.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="334.0" minWidth="10.0" prefWidth="210.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <Label text="From" GridPane.rowIndex="1" />
+                                    <DatePicker fx:id="startDP" prefHeight="26.0" prefWidth="189.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <Label text="To" GridPane.rowIndex="2" />
+                                    <DatePicker fx:id="endDP" layoutX="59.0" layoutY="15.0" prefHeight="26.0" prefWidth="189.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                    <Label fx:id="servicesTimeLabel" prefHeight="16.0" prefWidth="74.0" text="Timeframe" textAlignment="RIGHT" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                    <Button fx:id="serviceGoButton" mnemonicParsing="false" text="Go" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="3" onAction="#goButtonPressed"/>
+                                 </children>
+                              </GridPane>
+                              <BarChart fx:id="serviceFeesBarChart" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                <xAxis>
+                                  <CategoryAxis side="BOTTOM" />
+                                </xAxis>
+                                <yAxis>
+                                  <NumberAxis side="LEFT" />
+                                </yAxis>
+                              </BarChart>
+                           </children>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="productivityTimeLabel" text="Productivity Reports">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <GridPane layoutX="14.0" layoutY="14.0" prefHeight="303.0" prefWidth="663.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="326.0" minWidth="10.0" prefWidth="221.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="483.0" minWidth="10.0" prefWidth="442.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints maxHeight="145.0" minHeight="10.0" prefHeight="26.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="277.0" minHeight="10.0" prefHeight="277.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <GridPane prefHeight="162.0" prefWidth="208.0" GridPane.rowIndex="1">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="183.0" minWidth="10.0" prefWidth="60.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="334.0" minWidth="10.0" prefWidth="210.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Label text="From" GridPane.rowIndex="1" />
+                                    <DatePicker fx:id="startProductivityDP" prefHeight="26.0" prefWidth="189.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <Label text="To" GridPane.rowIndex="2" />
+                                    <DatePicker fx:id="endProductivityDP" layoutX="59.0" layoutY="15.0" prefHeight="26.0" prefWidth="189.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                    <Label fx:id="p" prefHeight="16.0" prefWidth="74.0" text="Timeframe" textAlignment="RIGHT" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                    <Button fx:id="productivityGoButton" mnemonicParsing="false" text="Go" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="3" />
+                                 </children>
+                              </GridPane>
+                              <PieChart fx:id="productivityPieChart" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <Label fx:id="productivityLabel" text="Productivity" GridPane.halignment="CENTER">
+                                 <font>
+                                    <Font size="17.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="clientVisitsTab" text="Client Visit Reports">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <GridPane layoutX="14.0" layoutY="14.0" prefHeight="312.0" prefWidth="668.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="326.0" minWidth="10.0" prefWidth="219.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="449.0" minWidth="10.0" prefWidth="449.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints maxHeight="150.0" minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="277.0" minHeight="10.0" prefHeight="277.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <GridPane prefHeight="162.0" prefWidth="208.0" GridPane.rowIndex="1">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="183.0" minWidth="10.0" prefWidth="60.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="334.0" minWidth="10.0" prefWidth="210.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints maxHeight="64.0" minHeight="10.0" prefHeight="61.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="78.0" minHeight="10.0" prefHeight="78.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Label text="From" GridPane.rowIndex="1" />
+                                    <DatePicker fx:id="startVisitsDP" prefHeight="26.0" prefWidth="189.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <Label text="To" GridPane.rowIndex="2" />
+                                    <DatePicker fx:id="endVisitsDP" layoutX="59.0" layoutY="15.0" prefHeight="26.0" prefWidth="189.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                    <Label fx:id="visitTimeframeLabel" prefHeight="16.0" prefWidth="74.0" text="Timeframe" textAlignment="RIGHT" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                    <Button fx:id="clientGoButton" mnemonicParsing="false" text="Go" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="3" />
+                                 </children>
+                              </GridPane>
+                              <Label fx:id="visitationLabel" text="Client Visitation" GridPane.halignment="CENTER">
+                                 <font>
+                                    <Font size="17.0" />
+                                 </font>
+                              </Label>
+                              <TableView fx:id="visitsTV" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                <columns>
+                                  <TableColumn fx:id="serviceNameColumn" prefWidth="139.0" text="Service Name" />
+                                  <TableColumn fx:id="numberPerformedColumn" prefWidth="180.0" text="Number Performed" />
+                                    <TableColumn fx:id="averageColumn" prefWidth="129.0" text="Average Time" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Separator layoutY="444.0" prefHeight="9.0" prefWidth="725.0" />
+      <Button fx:id="exportButton" layoutX="617.0" layoutY="453.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="98.0" text="Export" onAction="#exportButtonClicked"/>
+      <Button fx:id="printButton" layoutX="510.0" layoutY="453.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="98.0" text="Print" />
+   </children>
+</AnchorPane>
